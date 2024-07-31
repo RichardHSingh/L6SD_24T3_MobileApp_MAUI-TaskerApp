@@ -2,7 +2,7 @@
 
 Creating a task tracking application using .NET MAUI.<br>
 <br>
-The application will need to contain these functionalities listed:
+The application will need to contain these functionalities listed:<br>
 • SQLite database implementation<br>
 • Ability to create tasks<br>
 • Tasks will need to be updated and deleted<br>
