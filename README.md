@@ -1,4 +1,4 @@
-# MobileApp_Maui_TaskerApp
+# Mobile App Development .NET MAUI TaskerApp
 
 Creating a task tracking application using .NET MAUI.<br>
 <br>
