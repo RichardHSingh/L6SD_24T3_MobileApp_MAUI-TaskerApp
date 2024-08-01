@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!--===== CREATING KEY VALUES TO BE CALLED LATER KIDNA LIKE BOOTSTRAP CLASSES =====-->
+    <Color x:Key="DarkBlue">#212B4F</Color>
+    <Color x:Key="LightBlue">#8A8BA6</Color>
+
+
+    <!--===== ASSIGNED VALUES TO THE KEYS CREATED EARLIER =====-->
+    <Style Class="DarkBlue" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource DarkBlue}"/>
+    </Style>
+
+    <Style Class="LightBlue" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource LightBlue}"/>
+    </Style>
+
+    <!-- ==========================================================================================-->
+    <!-- ==========================================================================================-->
+    
+    <!--===== STYLE FOR HEADER =====-->
+    <Style Class="Header" TargetType="Label">
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="FontSize" Value="Title"/>
+    </Style>
+    
+
+    <!--===== STYLE FOR SUBTITLE =====-->
+    <Style Class="SubTitle" TargetType="Label">
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="HorizontalOptions" Value="Start"/>
+        <Setter Property="FontSize" Value="Medium"/>
+    </Style>
+    
+
+    <!--===== STYLE FOR CARD FOR CATERGORY =====-->
+    <Style Class="CardTitle" TargetType="Label">
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="FontSize" Value="Medium"/>
+    </Style>
+    
+    
+    <!--===== STYLE FOR SHADOW =====-->
+    <Shadow x:Key="shadow"
+            Brush="Black"
+            Opacity="0.5"
+            Radius="25"
+            Offset="10,15"/>
+    
+    
+    <!--===== STYLE FOR FRAME (ROUND RECTANGLE NOT WORKING) =====-->
+    <Style TargetType="Frame">
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="BackgroundColor" Value="#F5F6F7"/>
+        <Setter Property="WidthRequest" Value="200"/>
+        <Setter Property="HasShadow" Value="True"/>
+        <Setter Property="Shadow" Value="{StaticResource shadow}"/>
+    </Style>
+
+
+
+
+</ResourceDictionary>

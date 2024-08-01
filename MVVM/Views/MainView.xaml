@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:TaskNoter.Converters"
+             x:Class="TaskNoter.MVVM.Views.MainView"
+             Title="MainView">
+
+    <ContentPage.Resources>
+        <converters:ColorConverter x:Key="ColorConverter"/>
+    </ContentPage.Resources>
+    
+    <Grid Margin="20"
+          RowDefinitions=".1*, .3*, .7*">
+
+        <!--Title-->
+        <Label Text="Task Noter"
+               StyleClass="DarkBlue, Header"/>
+
+        <!--Category section code-->
+        <Grid Grid.Row="1"
+              RowDefinitions=".2*,.8*">
+            
+            <Label StyleClass="SubTitle"
+                   Text="CATEGORIES"/>
+
+            <CollectionView Grid.Row="1"
+                            ItemsSource="{Binding Categories}">
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="5" Orientation="Horizontal"/>
+                </CollectionView.ItemsLayout>
+                
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Frame>
+                                <VerticalStackLayout Padding="15" Spacing="10">
+                                    <Label StyleClass="DarkBlue, CardTitle"
+                                           Text="{Binding CategoryName}"/>
+
+                                    <Label StyleClass="LightBlue"
+                                           Text="{Binding PendingTasks, StringFormat='Tasks Associated: {0}'}"/>
+
+                                    <ProgressBar Progress="{Binding Percentage}"
+                                                 ProgressColor="{Binding Color, Converter={StaticResource ColorConverter}}"/>
+                                </VerticalStackLayout>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>                        
+                </CollectionView.ItemTemplate>
+                
+            </CollectionView>
+
+        </Grid>
+
+
+        <Grid Grid.Row="2"
+              RowDefinitions=".2*,.8*">
+            <Label StyleClass="SubTitle"
+                   Text="test"/>
+
+        </Grid>
+
+    </Grid>
+</ContentPage>
