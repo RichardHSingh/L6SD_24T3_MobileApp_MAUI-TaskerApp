@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PropertyChanged;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -8,6 +9,7 @@ using TaskNoter.MVVM.Models;
 
 namespace TaskNoter.MVVM.ViewModels
 {
+    [AddINotifyPropertyChangedInterface]
     public class MainViewModel
     {
         public ObservableCollection<Category> Categories { get; set; }
@@ -47,43 +49,43 @@ namespace TaskNoter.MVVM.ViewModels
             {
                new MyTask
                 {
-                    TaskName = "Upload Exersize Files",
+                    TaskName = "Create a watch list",
                     Completed = false,
                     CategoryId = 1
                 },
                 new MyTask
                 {
-                    TaskName = "Plan Next Course",
-                    Completed = false,
+                    TaskName = "Finish Fate Series",
+                    Completed = true,
                     CategoryId = 1
                 },
                 new MyTask
                 {
-                    TaskName = "Upload New ASP.NET Video On YouTube",
+                    TaskName = "Mow the lawn ",
                     Completed = false,
                     CategoryId = 2
                 },
                 new MyTask
                 {
-                    TaskName = "Fix Settings.cs class of the project",
+                    TaskName = "Clear the gutters",
                     Completed = false,
                     CategoryId = 2
                 },
                 new MyTask
                 {
-                    TaskName = "Update Github Repository",
+                    TaskName = "Laundray",
                     Completed = true,
                     CategoryId = 2
                 },
                 new MyTask
                 {
-                    TaskName = "Buy Eggs",
+                    TaskName = "Pick up groceries from Pak N Save",
                     Completed = false,
                     CategoryId = 3
                 },
                 new MyTask
                 {
-                    TaskName = "Go For The Pepperoni Pizza",
+                    TaskName = "Famers Market",
                     Completed = false,
                     CategoryId = 3
                 },

@@ -52,10 +52,9 @@
     
     
     <!--===== STYLE FOR FRAME (ROUND RECTANGLE NOT WORKING) =====-->
-    <Style TargetType="Frame">
+    <Style Class="BoxShadow" TargetType="Frame">
         <Setter Property="CornerRadius" Value="10"/>
         <Setter Property="BackgroundColor" Value="#F5F6F7"/>
-        <Setter Property="WidthRequest" Value="200"/>
         <Setter Property="HasShadow" Value="True"/>
         <Setter Property="Shadow" Value="{StaticResource shadow}"/>
     </Style>
