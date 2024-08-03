@@ -63,7 +63,8 @@
                    Margin="0,30,0,0"/>
 
             <CollectionView Grid.Row="1"
-                            ItemsSource="{Binding Tasks}">
+                            ItemsSource="{Binding Tasks}"
+                            ItemsUpdatingScrollMode="KeepLastItemInView">
                 <CollectionView.ItemTemplate>
                     <DataTemplate> 
                         <Frame BorderColor="Transparent"
@@ -94,6 +95,11 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </Grid>
+
+        <Button Grid.Row="2"
+                Clicked="Button_Clicked"
+                Text="+"
+                Style="{StaticResource circularButton}"/>
 
     </Grid>
 </ContentPage>

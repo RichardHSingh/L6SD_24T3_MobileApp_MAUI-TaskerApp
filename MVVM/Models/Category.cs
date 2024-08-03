@@ -24,5 +24,7 @@ namespace TaskNoter.MVVM.Models
 
         // complete rate of task
         public float Percentage { get; set; }
+
+        public bool IsSelected { get; set; }
     }
 }

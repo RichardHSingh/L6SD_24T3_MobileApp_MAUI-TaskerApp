@@ -8,7 +8,10 @@ namespace TaskNoter
         {
             InitializeComponent();
 
-            MainPage = new LandingPage();
+            //MainPage = new MainView();
+            //MainPage = new LandingPage();
+            //MainPage = new NewTaskView();
+            MainPage = new NavigationPage(new MainView());
         }
     }
 }

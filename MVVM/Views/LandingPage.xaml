@@ -43,14 +43,40 @@
                TextColor="Teal"
                HorizontalTextAlignment="Center"/>
 
-        <Button x:Name="newTaskBTN"
-                Text="New Task"
-                TextColor="White"
-                FontSize="Large"
-                BackgroundColor="DarkBlue"
-                WidthRequest="250"
-                Margin="0,60,0,0"
-                CornerRadius="30"
-                Clicked="newTaskBTN_Clicked"/>
+        <!-- StackLayout for buttons -->
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center"
+                     Margin="0,20,0,0">
+            <!-- Adjust top margin as needed -->
+
+            <!--<Button x:Name="currentTasks"
+                    Text="Current Tasks"
+                    TextColor="White"
+                    FontSize="Large"
+                    BackgroundColor="DarkBlue"
+                    WidthRequest="200"
+                    HeightRequest="69"
+                    CornerRadius="30"
+                    Clicked="currentTasks_Clicked"/>-->
+
+            <Button x:Name="currentTaskBtn"
+                    BackgroundColor="DarkBlue"
+                    CornerRadius="30"
+                    ImageSource="editor.png"
+                    Margin="0,10,0,0"
+                    Style="{StaticResource circularButton}"
+                    Clicked="currentTaskBtn_Clicked"/>
+            
+            <Button x:Name="newTaskBTN"
+                    BackgroundColor="DarkBlue"
+                    CornerRadius="30"
+                    Text="+"
+                    Style="{StaticResource circularButton}"
+                    Clicked="newTaskBTN_Clicked"/>
+
+            
+        </StackLayout>
+
+
     </StackLayout>
 </ContentPage>
